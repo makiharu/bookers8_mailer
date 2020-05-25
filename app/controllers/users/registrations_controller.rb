@@ -15,7 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super do
       if @user.save
-        ThanksMailer.complete_mail(@user).deliver_later
+        ThanksMailer.user_welcome_mail(@user).deliver_later
         #redirect_to @user Devise: コントローラのオーバライドでredirect_toを使わない
         users_path
       else
