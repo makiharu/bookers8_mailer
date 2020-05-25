@@ -1,5 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+    config.action_mailer.default_url_options = { host: 'localhost:3000' } #追加
+    #config.action_mailer.delivery_method = :letter_opener #追加
+
+  # #メールが送信されたとき（今回の場合はユーザー登録を行ったとき）にブラウザでメールを確認することが出来ます。
+
+
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
